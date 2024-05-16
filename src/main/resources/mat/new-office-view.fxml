@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<GridPane alignment="CENTER"
+          xmlns:fx="http://javafx.com/fxml"
+          hgap="10" vgap="10"
+          fx:controller="mat.OfficeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <children>
+        <Label fx:id="messageLBL"
+               text="New Office"
+               alignment="CENTER"
+               GridPane.columnIndex="0"
+               GridPane.rowIndex="0"
+               GridPane.columnSpan="2"/>
+
+        <Label text="Name : " GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="nameTF" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Button fx:id="newBTN"
+                text="New Position"
+                alignment="CENTER"
+                onAction="#onNewClick"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="2"/>
+
+        <TableView fx:id="chartTV"
+                   prefHeight="300.0"
+                   prefWidth="400.0"
+                   GridPane.columnIndex="0"
+                   GridPane.rowIndex="3"
+                   GridPane.columnSpan="2">
+            <columns>
+                <TableColumn prefWidth="75.0" text="Id"/>
+                <TableColumn prefWidth="75.0" text="Name"/>
+                <TableColumn prefWidth="75.0" text="Description"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="okBTN"
+                text="OK"
+                alignment="CENTER"
+                onAction="#onOkClick"
+                GridPane.columnIndex="0"
+                GridPane.rowIndex="4"/>
+
+        <Button text="Cancel"
+                alignment="CENTER"
+                onAction="#onCloseClick"
+                GridPane.columnIndex="1"
+                GridPane.rowIndex="4"/>
+
+    </children>
+</GridPane>
